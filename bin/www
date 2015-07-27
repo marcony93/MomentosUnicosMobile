@@ -12,8 +12,8 @@ var uri = "mongodb://localhost:27017/MOMDB";
 
   MongoCliente.connect(uri,function(err,db){
     if(err) throw err;
-    console.log("Conectado a mongo")
-  var app = require('../app');
+
+  var app = require('../app')(db);
   var debug = require('debug')('MUM:server');
   var http = require('http');
 
