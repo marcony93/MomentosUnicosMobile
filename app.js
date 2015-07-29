@@ -26,6 +26,22 @@ function returnApp(db){
   app.use('/', routes);
   app.use('/users', users);
 
+  app.get("/registrar",function(req,res){
+    res.render("registrar",{});
+  })
+
+  app.post("/datosregistro",function(req,res){
+    var registro = {"nombre":req.body.txtUserName,
+                    "contrasenia":req.body.txtPass};
+    res.render("index",registro);
+  })
+
+
+  app.get("/registrar",function(req,res){
+    res.render("registrar",{});
+  })
+
+
   // catch 404 and forward to error handler
   app.use(function(req, res, next) {
     var err = new Error('Not Found');

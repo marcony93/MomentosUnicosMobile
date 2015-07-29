@@ -14,6 +14,22 @@ body{
     margin-right:auto;
 }
 
+.usuario{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-align:right;
+
+}
+
+.footer{
+
+  //position: relative;
+  width: 64em;
+  margin-left:auto;
+  margin-right:auto;
+}
+
 .logo{
     width: 10em;
     border: 0;
